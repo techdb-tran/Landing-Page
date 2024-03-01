@@ -15,12 +15,12 @@ body{
 }
 .container{
     margin: 0 auto;
-    width: 100vw;
 }
 h1{
     font-family:  "Inknut Antiqua", serif;;
 }
 .agency-black{
+    width: 100%;
     height: 100vh;
     background: var(--black);
     color: var(--white);
@@ -28,22 +28,26 @@ h1{
 .agency-content{
     display: flex;
 }
-.agency-black nav{
-    display: flex;
-    width: 100vw;
-}
 .menu{
     display: flex;
-    width: 100%;
-    position: fixed;
-    top: 0;
+    width: 100vw;
     background-color: var(--black);
-    z-index: 10000;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+}
+.logo{
+    margin-top: 24px;
+}
+.menu-wrap{
+    display: flex;
+    width: 1170px;
+    justify-content: space-between;
+    margin: auto;
 }
 
 .li-menu{
     display: flex;
-    margin-left: 794px;
 }
 
 .li-menu ul{
@@ -75,17 +79,24 @@ h1{
 }
 .agency-slide{
     display: flex;
+    width: 200vw;
 }
 .agency-slide-1{
-    width: 1440px;
+    width: 50%;
     height: 600px;
-    display: flex;
+    /* display: flex; */
+}
+.agency-slide-1-wrap{
+    width: 1170px;
+    margin: auto;
+}
+.agency-slide-2-wrap{
+    width: 1170px;
+    margin: auto;
 }
 .agency-slide-2{
-    width: 1440px;
+    width: 50%;
     height: 600px;
-    display: flex;
-    margin-left: 500px;
 }
 .agency-content{
     text-transform: uppercase;
@@ -95,8 +106,7 @@ h1{
     font-size: 72px;
     line-height: 80px;
     margin-top: 146px;
-    margin-left: 135px;
-    z-index: 1000;
+    z-index: 10;
     position: relative;
 }
 
@@ -106,7 +116,6 @@ h1{
 .flower-logo img{
     width: 56px;
     height: 56px;
-    margin-left: 135px;
     margin-top: 52px;
     display: inline;
 }
@@ -129,31 +138,31 @@ h1{
     position: absolute;
     height: 268px;
     width: 268px;
-    margin-top: 169px;
-    margin-left: -172px;
+    margin-top: -725px;
+    margin-left: 1250px;
 }
 .bitmap1{
     position: relative;
     height: 624px;
     width: 570px;
-    margin-top: 264px;
-    margin-left:-230px;
     background: #FF564F;
     z-index: 2;
+    margin-top: -230px;
+    margin-left: 850px;
 }
 .combine2{
     position: absolute;
     height: 268px;
     width: 268px;
-    margin-top: 169px;
-    margin-left: -172px;
+    margin-top: -725px;
+    margin-left: 1250px;
 }
 .bitmap2{
     position: relative;
     height: 624px;
     width: 570px;
-    margin-top: 264px;
-    margin-left:-230px;
+    margin-top: -230px;
+    margin-left: 850px;
     background: pink;
     z-index: 2;
 }
@@ -167,15 +176,14 @@ h1{
     border-radius: 50%;
     margin-top: 140px;
 }
-.logo{
-    margin-top: 24px;
-    margin-left: 135px;
-}
 .agency-white{
     height: 340px;
-    width: 1170px;
-    margin-left: 135px;
+    width: 100%;
     color: var(--black);
+}
+.agency-white-wrap{
+    width: 1170px;
+    margin:auto;
 }
 .agency-white p{
     position: absolute;
@@ -192,7 +200,7 @@ h1{
     height:876px;
     border-top: 2px solid gray;
     display:flex;
-    margin-left: 135px;
+    margin: auto;
 }
 .advantage-clip{
     width: 756px;
@@ -278,14 +286,15 @@ h1{
 }
 .core-features-container{
     height: 880px;
-    width: 100vw;
-    background-color: var(--black);
+    width: 1170px;
     color: var(--white);
+    margin: auto;
 }
-
+.core-features{
+    width: 100vw;
+    background-color: var(--black)
+}
 .core-features-top{
-    width: 100%;
-    margin-left: 135px;
     display: flex;
 }
 .core-features-title{
@@ -317,7 +326,6 @@ h1{
 .carousel {
     width: 1170px;
     position: relative;
-    margin-left: 135px ;
     overflow: hidden;
 }
 
@@ -384,8 +392,9 @@ background-color: plum;
     letter-spacing: 0px;
     text-align: left;
 }
-
 .our-projects{
+    width: 1170px;
+    margin: auto;
     min-height: 1520px;
     height: fit-content;
     display: grid;
@@ -399,7 +408,6 @@ background-color: plum;
     display: flex;
     height: 320px;
     width: 1170px;
-    margin-left: 135px;
     border-bottom: 2px solid var(--black);
 }
 .our-projects-title{
@@ -429,7 +437,6 @@ background-color: plum;
 .our-projects-item2 { 
     grid-area: menu;
     height: 1200px;
-    margin-left: 135px;
 }
 .our-projects-item2 h4{
     height: 32px;
@@ -534,6 +541,7 @@ background-color: plum;
 }
 .client-say{
     height: 1072px;
+    margin: auto;
 }
 .clients-say-body{
     height: 780px;
@@ -543,10 +551,10 @@ background-color: plum;
 .clients-say-body-wrap{
     background-color: var(--black);
     height: 460px;
-    width: 100vw;
 }
 .clients-say-title{
-    margin-left: 135px;
+    width: 1170px;
+    margin: auto;
 }
 .clients-say-body-wrap h2{
     width: 455px;
@@ -578,12 +586,12 @@ background-color: plum;
 }
 .clients-say-slice{
     width: 1170px;
-    margin-left: 135px;
     border-bottom: 2px solid var(--black);
     height: 320px;
     position: relative;
     display: flex;
     align-items: center;
+    margin: auto;
 }
 .clients-say-slice-item-1{
     background: #417505;
@@ -651,12 +659,11 @@ background-color: plum;
     color: #FFFFFF80;
 }
 .clients-say-footer{
-    margin-left: 135px;
-    height: fit-content;
-    width: 1170px;
+    height: fit-content; 
 }
 .clients-say-footer-wrap{
-    width: 100%;
+    margin: auto;
+    width: 1170px;
     height: 288px;
     display: flex;
     justify-content: space-around;
@@ -689,7 +696,7 @@ background-color: plum;
 }
 .latest-blog-container{
     width: 1170px;
-    margin-left: 135px;
+    margin: auto;
     border-top: 2px solid var(--black);
     display: flex;
     justify-content: center;
@@ -757,8 +764,14 @@ background-color: plum;
 .blog-wrap p{
     color: #11111180;
 }
+.newsletter-container{
+    width: 100vw;
+    background-color: var(--black);
+}
 .newsletter{
     height: 864px;
+    width: 1170px;
+    margin: auto;
     background-color: var(--black);
     color: var(--white);
 }
@@ -769,7 +782,6 @@ background-color: plum;
     align-items: center;
     width: 1170px;
     height: 336px;
-    margin-left: 135px;
     border-bottom: 2px solid var(--white);
 }
 .newsletter-sign-up h2{
@@ -946,9 +958,13 @@ background-color: plum;
         color: #0082e6
     }
 }
-@media (max-width: 375px) {
+@media (max-width: 390px) {
     main{
         overflow-x: hidden;
+    }
+    .menu-wrap{
+        position: relative;
+        margin-left: 0px;
     }
     .agency-black{
         width: 100vw;
@@ -978,12 +994,18 @@ background-color: plum;
         height: 397px;
         width: 298px;
     }
-    .bitmap1{
-        position: static;
+    .bitmap1, .bitmap2{
         height: 360px;
         width: 329px;
-        margin-top: 500px;
-        margin-left:-330px;
+        margin-top: 10px;
+        margin-left: 35px;
+    }
+    .combine1, .combine2{
+        position: absolute;
+        height: 268px;
+        width: 268px;
+        margin-top: -450px;
+        margin-left: 250px;
     }
     .agency-slide-1{
         width: 460px;
@@ -1000,13 +1022,6 @@ background-color: plum;
         background-color:  #FF564F;
         border-radius: 50%;
         margin-top: 300px;
-    }
-    .combine1{
-        position: absolute;
-        height: 268px;
-        width: 268px;
-        margin-top: 400px;
-        margin-left: -142px;
     }
     .li-menu{
         display: flex;
@@ -1367,8 +1382,8 @@ background-color: plum;
     width: 330px;
     height: 64px;
 }
-.newsletter{
-    height: 1698px;
+.newsletter-container{
+    height: 1798px;
 }
 .newsletter-sign-up{
     position: static;
@@ -1376,22 +1391,22 @@ background-color: plum;
     flex-direction: column;
     justify-content: flex-start;
     border-bottom: none;
-    width: 100%;
+    width: 100vw;
     height: 336px;
 }
 .newsletter-sign-up h2{
     width: 213px;
     height: 144px;
-    margin-left: -329px;
     margin-top: 103px;
     font-weight: 900;
     line-height: 48px;
+    margin-left: -120px;
 }
 #email-form{
     width: 329px;
     height: 288px;
     margin-top: 300px;
-    margin-left: -260px;
+    margin-left: -10px;
 }
 .email-wrap{
     display: block;
