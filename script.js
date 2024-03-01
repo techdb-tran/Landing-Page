@@ -16,7 +16,7 @@ $(document).ready(function() {
     }
 
     function createDots() {
-        $(".dots").empty(); // Xóa các dấu chấm hiện tại trước khi tạo mới
+        $(".dots").empty();
         for (let i = 0; i < totalDots; i++) {
             $(".dots").append("<span class='dot'></span>");
         }

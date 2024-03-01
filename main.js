@@ -66,21 +66,21 @@ function loadMoreProjectsByField(field) {
         .catch(error => console.log(`Error fetching ${field} projects:`, error));
 }
 
-document.getElementById("all-projects").addEventListener('click', () => {
+document.querySelector(".all-projects").addEventListener('click', () => {
         loadProjectsByField('all-projects');
 });
-document.getElementById("design").addEventListener('click', () => {
+document.querySelector(".design").addEventListener('click', () => {
         loadProjectsByField('design');
 });
-document.getElementById("development").addEventListener('click', () => {
+document.querySelector(".development").addEventListener('click', () => {
         loadProjectsByField('development');
 });
 
-document.getElementById("branding").addEventListener('click', () => {
+document.querySelector(".branding").addEventListener('click', () => {
         loadProjectsByField('branding');
 });
 
-document.getElementById("products").addEventListener('click', () => {
+document.querySelector(".products").addEventListener('click', () => {
         loadProjectsByField('products');
 });
 
@@ -93,15 +93,26 @@ document.querySelectorAll(".our-projects-item2 a").forEach(link => {
         link.addEventListener("click", event => {
             event.preventDefault();
             const targetId = link.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
+            const targetElement = document.querySelector(`.${targetId}`);
             if (targetElement) {
                 targetElement.scrollIntoView({
                     behavior: "smooth",
                     block: "start"
-                });
-            }
-        });
+            });
+        }
     });
+});
+// Xử lý sự kiện active
+let listItems = document.querySelectorAll('.our-projects-item2 li a');
+
+listItems.forEach(function(item) {
+  item.addEventListener('click', function() {
+    listItems.forEach(function(li) {
+      li.classList.remove('selected');
+    });
+        this.classList.add('selected');
+  });
+});
 
 // Slice client say
 const clientSliceBtnPrev = document.getElementById('clients-say-btn-prev');
@@ -192,3 +203,4 @@ const agencySlide = ()=>{
 }
 slideBtnPrevEl.addEventListener('click',  agencySlide);
 slideBtnNextEl.addEventListener('click',  agencySlide);
+
