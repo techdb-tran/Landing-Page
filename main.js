@@ -84,6 +84,10 @@ document.querySelector(".products").addEventListener('click', () => {
         loadProjectsByField('products');
 });
 
+document.querySelector(".nav-responsive").addEventListener('change', function() {
+    var selectedOption = this.value;
+    loadProjectsByField(selectedOption);
+});
 // Xử lý sự kiện "load more" cho lĩnh vực hiện tại
 document.getElementById("load-more").addEventListener("click", () => {
 loadMoreProjectsByField(fieldCurrent);
@@ -179,7 +183,7 @@ const agencyContent2El = document.querySelector(".agency-slide-2");
 const pageCurrentEl = document.querySelector(".pageCurrent");
 let slide1Show = true;
 let isProcessAgency = false
-const agencySlide = ()=>{
+const agencySlide1 = ()=>{
     if(isProcessAgency){
         return;
     }
@@ -201,6 +205,28 @@ const agencySlide = ()=>{
         isProcessAgency = false;
     },1000);
 }
-slideBtnPrevEl.addEventListener('click',  agencySlide);
-slideBtnNextEl.addEventListener('click',  agencySlide);
+const agencySlide2 = ()=>{
+    if(isProcessAgency){
+        return;
+    }
+    isProcessAgency = true;
+    if(slide1Show){
+    agencyContent1El.style.transform = 'translateX(1940px)'
+    agencyContent2El.style.transform = 'translateX(-1940px)'
+    agencyContent2El.style.transition = '1s'
+    slide1Show = false;
+    pageCurrentEl.textContent = '2/2';
+    }else{
+    agencyContent1El.style.transform = 'translateX(0px)'
+    agencyContent2El.style.transform = 'translateX(0px)'
+    agencyContent1El.style.transition = '1s';
+    slide1Show = true;
+    pageCurrentEl.textContent = '1/2';
+    }
+    setTimeout(()=>{
+        isProcessAgency = false;
+    },1000);
+}
+slideBtnPrevEl.addEventListener('click',  agencySlide1);
+slideBtnNextEl.addEventListener('click',  agencySlide2);
 

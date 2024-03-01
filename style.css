@@ -10,32 +10,35 @@
     --black: #111111;
     --white: #ffffff;
 }
-main{
+body{
     overflow-x: hidden;
+}
+.container{
+    margin: 0 auto;
+    width: 100vw;
 }
 h1{
     font-family:  "Inknut Antiqua", serif;;
 }
 .agency-black{
-    height: 700px;
+    height: 100vh;
     background: var(--black);
     color: var(--white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100vw;
 }
 .agency-content{
     display: flex;
-    justify-content: center;
 }
 .agency-black nav{
     display: flex;
+    width: 100vw;
 }
 .menu{
     display: flex;
     width: 100%;
-    height: fit-content;
+    position: fixed;
+    top: 0;
+    background-color: var(--black);
+    z-index: 10000;
 }
 
 .li-menu{
@@ -360,7 +363,6 @@ background-color: plum;
     margin-top: 48px;
 }
 .carousel-item h3{
-    width: fit-content;
     height: 32px;
     font-family: "Roboto Condensed";
     font-size: 24px;
@@ -620,7 +622,6 @@ background-color: plum;
     margin-left: 48px;
 }
 .avatar-name h3{
-    width: fit-content;
     height: fit-content;
     font-family: 'Roboto Condensed';
     font-size: 24px;
@@ -639,7 +640,6 @@ background-color: plum;
 .slice-des{
     max-width: 374px;
     max-height: 229px;
-    width: fit-content;
     height: fit-content;
     margin-left: 48px;
     margin-top: 107px;
@@ -792,7 +792,6 @@ background-color: plum;
 }
 #label-email{
     display: block;
-    width: fit-content;
     height: 32px;
     font-family: 'Roboto Condensed';
     font-size: 16px;
@@ -909,31 +908,34 @@ background-color: plum;
     color: var(--white);
 }
 @media (max-width: 1120px) {
+    .agency-black{
+        width: 100vw;
+        height: 704px;
+    }
     .logo{
         font-size: 30px;
         padding-right: 150px;
     }
     .li-menu{
         display: flex;
-        margin-left: 10%;
-        background-color: cadetblue;
+        margin-left: 20%;
     }
     .li-menu ul{
         position: fixed;
         display: flex;
         width: 50vw;
-        left: -100%;
         height: 100vh;
-        margin-top: 80px;
+        margin-top: 60px;
+        right: -100%;
         flex-direction: column;
         justify-content: flex-start;
         background: #2c3e50;
-        z-index: 2000;
+        z-index: 20000;
         text-align: center;
         transition: 0.5s;
     }
     .li-menu:hover ul{
-        left: 0;
+        right: 0;
     }
     .li-menu ul li{
         margin-top: 35px ;
@@ -943,35 +945,19 @@ background-color: plum;
         background: khaki;
         color: #0082e6
     }
-    #check:checked .li-menu ul{
-        position: fixed;
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-        left: 50;
-        margin-top: 80px;
-        flex-direction: column;
-        justify-content: flex-start;
-        background: #2c3e50;
-        z-index: 2000;
-        text-align: center;
-        transition: all .5s;
-    }
 }
 @media (max-width: 375px) {
+    main{
+        overflow-x: hidden;
+    }
     .agency-black{
-        width: 100%;
+        width: 100vw;
         height: 704px;
     }
-    .menu{
-        display: flex;
-        justify-content: space-between;
-    }
     .check-menu{
-        display: flex;
         width: 30px;
         height: 28px;
-        margin-right: 10px;
+        margin-left: 50px;
     }
     .logo{
         height: 32px;
@@ -993,7 +979,7 @@ background-color: plum;
         width: 298px;
     }
     .bitmap1{
-        position: relative;
+        position: static;
         height: 360px;
         width: 329px;
         margin-top: 500px;
@@ -1024,7 +1010,6 @@ background-color: plum;
     }
     .li-menu{
         display: flex;
-        background-color: cadetblue;
     }
     .agency-content{
         text-transform: uppercase;
