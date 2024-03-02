@@ -82,7 +82,7 @@ h1{
     width: 200vw;
 }
 .agency-slide-1{
-    width: 50%;
+    width: 100vw;
     height: 600px;
     /* display: flex; */
 }
@@ -95,7 +95,7 @@ h1{
     margin: auto;
 }
 .agency-slide-2{
-    width: 50%;
+    width: 100vw;
     height: 600px;
 }
 .agency-content{
@@ -109,7 +109,6 @@ h1{
     z-index: 10;
     position: relative;
 }
-
 .flower-logo{
     display: flex;
 }
@@ -130,10 +129,6 @@ h1{
     margin-left: 44px;
     margin-top: 49px;
 }
-.agency-img{
-    height: 513px;
-    width: 684px;
-}
 .combine1{
     position: absolute;
     height: 268px;
@@ -146,7 +141,6 @@ h1{
     height: 624px;
     width: 570px;
     background: #FF564F;
-    z-index: 2;
     margin-top: -230px;
     margin-left: 850px;
 }
@@ -164,7 +158,6 @@ h1{
     margin-top: -230px;
     margin-left: 850px;
     background: pink;
-    z-index: 2;
 }
 .agency-black h3{
     font-family: "Roboto Condensed", sans-serif;
@@ -178,7 +171,7 @@ h1{
 }
 .agency-white{
     height: 340px;
-    width: 100%;
+    width: 100vw;
     color: var(--black);
 }
 .agency-white-wrap{
@@ -958,7 +951,7 @@ background-color: plum;
         color: #0082e6
     }
 }
-@media (max-width: 390px) {
+@media (max-width: 392px) {
     main{
         overflow-x: hidden;
     }
@@ -1001,20 +994,16 @@ background-color: plum;
         margin-left: 35px;
     }
     .combine1, .combine2{
-        position: absolute;
         height: 268px;
         width: 268px;
-        margin-top: -450px;
-        margin-left: 250px;
+        /* margin-top: -450px;
+        margin-left: 250px; */
     }
     .agency-slide-1{
-        width: 460px;
         height: 600px;
     }
     .agency-slide-2{
-        width: 1440px;
         height: 600px;
-        margin-left: 1500px;
     }
     .agency-white button{
         width: 48px;
@@ -1441,6 +1430,3 @@ background-color: plum;
     margin-top: 85px;
 }
 }
-
-
-
