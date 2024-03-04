@@ -93,7 +93,7 @@ document.getElementById("load-more").addEventListener("click", () => {
 loadMoreProjectsByField(fieldCurrent);
 });
 loadProjectsByField('all-projects');
-document.querySelectorAll(".our-projects-item2 a").forEach(link => {
+document.querySelectorAll(".li-menu a").forEach(link => {
         link.addEventListener("click", event => {
             event.preventDefault();
             const targetId = link.getAttribute("href").substring(1);
@@ -105,6 +105,19 @@ document.querySelectorAll(".our-projects-item2 a").forEach(link => {
             });
         }
     });
+});
+document.querySelectorAll(".footer-right a").forEach(link => {
+    link.addEventListener("click", event => {
+        event.preventDefault();
+        const targetId = link.getAttribute("href").substring(1);
+        const targetElement = document.querySelector(`.${targetId}`);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+        });
+    }
+});
 });
 // Xử lý sự kiện active
 let listItems = document.querySelectorAll('.our-projects-item2 li a');
@@ -175,13 +188,17 @@ function clientSlide(){
 }
 clientSliceBtnPrev.addEventListener('click', clientSlide)
 clientSliceBtnNext.addEventListener('click', clientSlide)
+
+// setInterval(()=>{
+//     clientSlide()
+// },3000)
 // Slide agency
 const slideBtnPrevEl = document.querySelector(".agency-white-btn-prev")
 const slideBtnNextEl = document.querySelector(".agency-white-btn-next")
 const agencyContent1El = document.querySelector(".agency-slide-1");
 const agencyContent2El = document.querySelector(".agency-slide-2");
 const pageCurrentEl = document.querySelector(".pageCurrent");
-let slide1Show = true;
+let slide1Show = false;
 let isProcessAgency = false
 const agencySlide = ()=>{
     if(isProcessAgency){
@@ -205,6 +222,10 @@ const agencySlide = ()=>{
         isProcessAgency = false;
     },1000);
 }
+agencySlide()
+// setInterval(()=>{
+//     agencySlide()
+// },2000)
 slideBtnPrevEl.addEventListener('click', ()=>{
     agencySlide();
 });

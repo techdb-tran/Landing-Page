@@ -36,6 +36,9 @@ h1{
     position: fixed;
     z-index: 100;
 }
+#check{
+    display: none;
+}
 .logo{
     margin-top: 24px;
 }
@@ -49,7 +52,6 @@ h1{
 .li-menu{
     display: flex;
 }
-
 .li-menu ul{
     display: flex;
     width: 286px;
@@ -73,9 +75,6 @@ h1{
     font-size: 30px;
     line-height: 80px;
     cursor: pointer;
-}
-#check{
-    display: none;
 }
 .agency-slide{
     display: flex;
@@ -129,12 +128,14 @@ h1{
     margin-left: 44px;
     margin-top: 49px;
 }
-.combine1{
+
+.combine1,.combine2{
     position: absolute;
     height: 268px;
     width: 268px;
     margin-top: -725px;
     margin-left: 1250px;
+    z-index: -1;
 }
 .bitmap1{
     position: relative;
@@ -142,14 +143,7 @@ h1{
     width: 570px;
     background: #FF564F;
     margin-top: -230px;
-    margin-left: 850px;
-}
-.combine2{
-    position: absolute;
-    height: 268px;
-    width: 268px;
-    margin-top: -725px;
-    margin-left: 1250px;
+    margin-left: 780px;
 }
 .bitmap2{
     position: relative;
@@ -168,6 +162,11 @@ h1{
     background-color:  #FF564F;
     border-radius: 50%;
     margin-top: 140px;
+    border: none;
+}
+.agency-white button:hover{
+    opacity: 0.3;
+    cursor: pointer;
 }
 .agency-white{
     height: 340px;
@@ -576,6 +575,11 @@ background-color: plum;
     width: 48px;
     background-color: #FF564F;
     border-radius: 50%;
+    border: none;
+}
+.clients-say-btn button:hover{
+    cursor: pointer;
+    opacity: 0.3;
 }
 .clients-say-slice{
     width: 1170px;
@@ -912,7 +916,10 @@ background-color: plum;
     text-decoration: none;
     color: var(--white);
 }
-@media (max-width: 1120px) {
+@media (max-width: 1340px) {
+    main{
+        overflow-x: hidden;
+    }
     .agency-black{
         width: 100vw;
         height: 704px;
@@ -920,36 +927,9 @@ background-color: plum;
     .logo{
         font-size: 30px;
         padding-right: 150px;
+        margin-left: 135px;
     }
-    .li-menu{
-        display: flex;
-        margin-left: 20%;
-    }
-    .li-menu ul{
-        position: fixed;
-        display: flex;
-        width: 50vw;
-        height: 100vh;
-        margin-top: 60px;
-        right: -100%;
-        flex-direction: column;
-        justify-content: flex-start;
-        background: #2c3e50;
-        z-index: 20000;
-        text-align: center;
-        transition: 0.5s;
-    }
-    .li-menu:hover ul{
-        right: 0;
-    }
-    .li-menu ul li{
-        margin-top: 35px ;
-    }
-    .li-menu ul li a:hover{
-        cursor: pointer;
-        background: khaki;
-        color: #0082e6
-    }
+    
 }
 @media (max-width: 392px) {
     main{
@@ -957,7 +937,9 @@ background-color: plum;
     }
     .menu-wrap{
         position: relative;
-        margin-left: 0px;
+    }
+    .agency-content{
+        width: 100vw;
     }
     .agency-black{
         width: 100vw;
@@ -966,13 +948,43 @@ background-color: plum;
     .check-menu{
         width: 30px;
         height: 28px;
-        margin-left: 50px;
+        margin-right: 23px;
     }
     .logo{
         height: 32px;
         width: 82px;
         font-size: 24px;
         margin-left: 23px;
+    }
+    .li-menu{
+        display: flex;
+        margin-right: 23px;
+    }
+    .li-menu ul{
+        position: fixed;
+        display: flex;
+        width: 150px;
+        height: 100vh;
+        margin-top: 60px;
+        right: -100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: #2c3e50;
+        z-index: 2000;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .li-menu:hover ul{
+        right: 0;
+    }
+    .li-menu ul li a{
+        display: block;
+        margin: 20px 0;
+    }
+    .li-menu ul li a:hover{
+        cursor: pointer;
+        background: khaki;
+        color: #0082e6
     }
     .flower-logo img{
         height: 56px;
@@ -996,6 +1008,8 @@ background-color: plum;
     .combine1, .combine2{
         height: 268px;
         width: 268px;
+        margin-top: -420px;
+        margin-left: 250px;
     }
     .agency-slide-1{
         height: 600px;
@@ -1041,7 +1055,6 @@ background-color: plum;
         width: 454px;
         height: 340px;
         margin-left: -80px;
-        background-color: #a04e4a;
     }
     .video-yt{
         width: 329px;
@@ -1251,6 +1264,10 @@ background-color: plum;
         margin-left: 23px;
         justify-content: center;
         align-items: center;
+    }
+    .nav-responsive{
+        width: 85vw;
+        height: 40px;
     }
     .clients-say{
         height: 1728px;
