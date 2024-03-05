@@ -230,9 +230,9 @@ const agencySlide = ()=>{
     },1000);
 }
 agencySlide()
-// setInterval(()=>{
-//     agencySlide()
-// },2000)
+setInterval(()=>{
+    agencySlide()
+},2000)
 slideBtnPrevEl.addEventListener('click', ()=>{
     agencySlide();
 });
