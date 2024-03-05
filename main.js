@@ -53,6 +53,7 @@ function loadMoreProjectsByField(field) {
     fetch('db.json')
         .then(response => response.json())
         .then(data => {
+            const allProjectsCount = data.length;
             if(field=="all-projects"){
                 displayProjectsFromTo(data, displayedProjects, displayedProjects + 2, field);
                 fieldCurrent= field;
@@ -61,6 +62,12 @@ function loadMoreProjectsByField(field) {
                 const filteredProjects = data.filter(project => project.field === field);
                 displayProjectsFromTo(filteredProjects, displayedProjects, displayedProjects + 2, field);
                 fieldCurrent =field; 
+            }
+            displayedProjects += 2;
+            if (displayedProjects >= allProjectsCount) {
+                document.getElementById("load-more").style.display = "none";
+            } else {
+                document.getElementById("load-more").style.display = "block";
             }
         })
         .catch(error => console.log(`Error fetching ${field} projects:`, error));

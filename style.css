@@ -65,6 +65,10 @@ h1{
 .li-menu ul li a{
     text-decoration: none;
     color: var(--white);
+    display: block;
+}
+.li-menu ul li a:hover{
+    color: #FF564F;
 }
 .check-menu{
     display: flex;
@@ -915,6 +919,9 @@ background-color: plum;
 .footer-right-item1 a{
     text-decoration: none;
     color: var(--white);
+}
+.footer-right-item1 a:hover{
+    color: #ff635c;
 }
 @media (max-width: 1340px) {
     main{
