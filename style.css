@@ -1388,7 +1388,7 @@ background-color: plum;
     width: 329px;
     height: 288px;
     margin-top: 300px;
-    margin-left: -10px;
+    margin-left: 0;
 }
 .email-wrap{
     display: block;
