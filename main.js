@@ -1,5 +1,5 @@
 const eleGroupImg = document.querySelector('.group-img');
-const eleVideoYoutube = document.querySelector('.video-yt-wrap');
+const eleVideoYoutube = document.querySelector('.video-yt__wrap');
 eleGroupImg.addEventListener('click', function(){
         eleGroupImg.style.display='none';
         eleVideoYoutube.innerHTML = `<iframe class="video-yt" width="560" height="315" src="https://www.youtube.com/embed/OV8q23AsZUg?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
@@ -7,7 +7,7 @@ eleGroupImg.addEventListener('click', function(){
 // Khai báo một biến đếm để theo dõi số lượng dự án đã hiển thị
 let displayedProjects = 0;
 let fieldCurrent = '';
-const projectsEle = document.querySelector(".our-projects-item3");
+const projectsEle = document.querySelector(".our-projects__show");
 // Function để hiển thị các dự án từ index b cho đến index e và lọc theo field
 function displayProjectsFromTo(data, b, e, fieldFilter) {
     for (let i = b; i < e; i++) {
@@ -16,14 +16,17 @@ function displayProjectsFromTo(data, b, e, fieldFilter) {
         if (fieldFilter === 'all-projects' || fieldFilter === project.field) {
             const projectDiv = document.createElement('div');
             projectDiv.classList.add('our-projects-banner');
-            projectDiv.style.backgroundColor = project.color;
+            projectDiv.style.backgroundColor = project.backgroundColor;
+            projectDiv.style.color = project.color;
 
             const projectHTML = `
                 <div>
                     <h5>${project.field}</h5>
                     <h3>${project['project-name']}</h3>
                 </div>
+                <div>
                 <img src="${project.img}" alt="${project['project-name']}">
+                </div>
             `;
             projectDiv.innerHTML = projectHTML;
             projectsEle.appendChild(projectDiv);
@@ -65,9 +68,9 @@ function loadMoreProjectsByField(field) {
             }
             displayedProjects += 2;
             if (displayedProjects >= allProjectsCount) {
-                document.getElementById("load-more").style.display = "none";
+                document.getElementById("load-more-btn").style.display = "none";
             } else {
-                document.getElementById("load-more").style.display = "block";
+                document.getElementById("load-more-btn").style.display = "block";
             }
         })
         .catch(error => console.log(`Error fetching ${field} projects:`, error));
@@ -91,16 +94,16 @@ document.querySelector(".products").addEventListener('click', () => {
         loadProjectsByField('products');
 });
 
-document.querySelector(".nav-responsive").addEventListener('change', function() {
+document.querySelector(".portfolio__select").addEventListener('change', function() {
     var selectedOption = this.value;
     loadProjectsByField(selectedOption);
 });
 // Xử lý sự kiện "load more" cho lĩnh vực hiện tại
-document.getElementById("load-more").addEventListener("click", () => {
+document.getElementById("load-more-btn").addEventListener("click", () => {
 loadMoreProjectsByField(fieldCurrent);
 });
 loadProjectsByField('all-projects');
-document.querySelectorAll(".li-menu a").forEach(link => {
+document.querySelectorAll(".menu__items a").forEach(link => {
         link.addEventListener("click", event => {
             event.preventDefault();
             const targetId = link.getAttribute("href").substring(1);
@@ -127,7 +130,7 @@ document.querySelectorAll(".footer-right a").forEach(link => {
 });
 });
 // Xử lý sự kiện active
-let listItems = document.querySelectorAll('.our-projects-item2 li a');
+let listItems = document.querySelectorAll('.our-projects__portfolio li a');
 
 listItems.forEach(function(item) {
   item.addEventListener('click', function() {
@@ -141,9 +144,9 @@ listItems.forEach(function(item) {
 // Slice client say
 const clientSliceBtnPrev = document.getElementById('clients-say-btn-prev');
 const clientSliceBtnNext = document.getElementById('clients-say-btn-next');
-const clientSlice1Ele = document.querySelector('.clients-say-slice-item-1');
-const clientSlice2Ele = document.querySelector('.clients-say-slice-item-2');
-const clientSlice3Ele = document.querySelector('.clients-say-slice-item-3');
+const clientSlice1Ele = document.querySelector('.clients-say-slide-item-1');
+const clientSlice2Ele = document.querySelector('.clients-say-slide-item-2');
+const clientSlice3Ele = document.querySelector('.clients-say-slide-item-3');
 let avatarImgCurrent1 = true;
 let arr = ['a', 'b', 'c'];
 let isProcessing = false
@@ -200,10 +203,10 @@ clientSliceBtnNext.addEventListener('click', clientSlide)
 //     clientSlide()
 // },3000)
 // Slide agency
-const slideBtnPrevEl = document.querySelector(".agency-white-btn-prev")
-const slideBtnNextEl = document.querySelector(".agency-white-btn-next")
-const agencyContent1El = document.querySelector(".agency-slide-1");
-const agencyContent2El = document.querySelector(".agency-slide-2");
+const slideBtnPrevEl = document.querySelector(".agency__white-btn-prev")
+const slideBtnNextEl = document.querySelector(".agency__white-btn-next")
+const agencyContent1El = document.querySelector(".agency__slide-1__container");
+const agencyContent2El = document.querySelector(".agency__slide-2__container");
 const pageCurrentEl = document.querySelector(".pageCurrent");
 let slide1Show = false;
 let isProcessAgency = false
@@ -230,12 +233,5 @@ const agencySlide = ()=>{
     },1000);
 }
 agencySlide()
-setInterval(()=>{
-    agencySlide()
-},2000)
-slideBtnPrevEl.addEventListener('click', ()=>{
-    agencySlide();
-});
-slideBtnNextEl.addEventListener('click',  ()=>{
-    agencySlide()
-});
+slideBtnPrevEl.addEventListener('click', agencySlide);
+slideBtnNextEl.addEventListener('click',agencySlide);

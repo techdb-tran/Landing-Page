@@ -3,121 +3,140 @@
     "field": "design",
     "project-name": "Creative Template",
     "img": "https://gcdnb.pbrd.co/images/De0kGZBomhZ0.png",
-    "color": "#F8E71C"
+    "color": "#000000",
+    "backgroundColor": "#F8E71C"
   },
   {
     "field": "branding",
     "project-name": "Amazing Startup",
     "img": "https://gcdnb.pbrd.co/images/7CeviWOpbboX.png",
-    "color": "#FF564F"
-  }
-  ,
+    "color": "#FFFFFF",
+    "backgroundColor": "#FF564F"
+  },
   {
     "field": "development",
     "project-name": "E-commerce",
-    "img": "https://picsum.photos/800/600?random=2",
-    "color": "blue"
+    "img": "https://gcdnb.pbrd.co/images/De0kGZBomhZ0.png",
+    "color": "#FFFFFF",
+    "backgroundColor": "blue"
   },
   {
     "field": "products",
     "project-name": "Catalog App",
-    "img": "https://picsum.photos/800/600?random=4",
-    "color": "yellow"
+    "img": "https://gcdnb.pbrd.co/images/7CeviWOpbboX.png",
+    "color": "#333333",
+    "backgroundColor": "yellow"
   },
   {
     "field": "design",
     "project-name": "UI/UX Design",
-    "img": "https://picsum.photos/800/600?random=5",
-    "color": "orange"
+    "img": "https://gcdnb.pbrd.co/images/De0kGZBomhZ0.png",
+    "color": "#333333",
+    "backgroundColor": "orange"
   },
   {
     "field": "development",
     "project-name": "Mobile Banking",
-    "img": "https://picsum.photos/800/600?random=6",
-    "color": "purple"
+    "img": "https://gcdnb.pbrd.co/images/7CeviWOpbboX.png",
+    "color": "#FFFFFF",
+    "backgroundColor": "purple"
   },
   {
     "field": "branding",
     "project-name": "Social Media",
-    "img": "https://picsum.photos/800/600?random=7",
-    "color": "cyan"
+    "img": "https://gcdnb.pbrd.co/images/De0kGZBomhZ0.png",
+    "color": "#FFFFFF",
+    "backgroundColor": "cyan"
   },
   {
     "field": "products",
     "project-name": "Inventory Management",
-    "img": "https://picsum.photos/800/600?random=8",
-    "color": "magenta"
+    "img": "https://gcdnb.pbrd.co/images/7CeviWOpbboX.png",
+    "color": "#333333",
+    "backgroundColor": "magenta"
   },
   {
     "field": "design",
     "project-name": "Logo Design",
-    "img": "https://picsum.photos/800/600?random=9",
-    "color": "pink"
+    "img": "https://gcdnb.pbrd.co/images/De0kGZBomhZ0.png",
+    "color": "#333333",
+    "backgroundColor": "pink"
   },
   {
     "field": "development",
     "project-name": "Management Software",
-    "img": "https://picsum.photos/800/600?random=10",
-    "color": "brown"
+    "img": "https://gcdnb.pbrd.co/images/7CeviWOpbboX.png",
+    "color": "#FFFFFF",
+    "backgroundColor": "brown"
   },
   {
     "field": "branding",
     "project-name": "Event Branding",
-    "img": "https://picsum.photos/800/600?random=11",
-    "color": "teal"
+    "img": "https://gcdnb.pbrd.co/images/De0kGZBomhZ0.png",
+    "color": "#FFFFFF",
+    "backgroundColor": "teal"
   },
   {
     "field": "products",
     "project-name": "Sync System",
-    "img": "https://picsum.photos/800/600?random=12",
-    "color": "lime"
+    "img": "https://gcdnb.pbrd.co/images/7CeviWOpbboX.png",
+    "color": "#333333",
+    "backgroundColor": "lime"
   },
   {
     "field": "design",
     "project-name": "Restaurant",
-    "img": "https://picsum.photos/800/600?random=13",
-    "color": "indigo"
+    "img": "https://gcdnb.pbrd.co/images/De0kGZBomhZ0.png",
+    "color": "#FFFFFF",
+    "backgroundColor": "indigo"
   },
   {
     "field": "development",
     "project-name": "Task Management",
-    "img": "https://picsum.photos/800/600?random=14",
-    "color": "gray"
+    "img": "https://gcdnb.pbrd.co/images/7CeviWOpbboX.png",
+    "color": "#FFFFFF",
+    "backgroundColor": "gray"
   },
   {
     "field": "branding",
     "project-name": "Identity Design",
-    "img": "https://picsum.photos/800/600?random=15",
-    "color": "black"
+    "img": "https://gcdnb.pbrd.co/images/De0kGZBomhZ0.png",
+    "color": "#FFFFFF",
+    "backgroundColor": "black"
   },
   {
     "field": "products",
     "project-name": "Online Booking",
-    "img": "https://picsum.photos/800/600?random=16",
-    "color": "white"
+    "img": "https://gcdnb.pbrd.co/images/7CeviWOpbboX.png",
+    "color": "#333333",
+    "backgroundColor": "white"
   },
   {
     "field": "design",
     "project-name": "Print Design",
-    "img": "https://picsum.photos/800/600?random=17",
-    "color": "silver"
+    "img": "https://gcdnb.pbrd.co/images/De0kGZBomhZ0.png",
+    "color": "#333333",
+    "backgroundColor": "silver"
   },
   {
     "field": "development",
     "project-name": "(CRM) Software",
-    "img": "https://picsum.photos/800/600?random=18",
-    "color": "gold"
+    "img": "https://gcdnb.pbrd.co/images/7CeviWOpbboX.png",
+    "color": "#FFFFFF",
+    "backgroundColor": "gold"
   },
   {
     "field": "branding",
     "project-name": "Product Packaging",
-    "img": "https://picsum.photos/800/600?random=19",
-    "color": "bronze"
+    "img": "https://gcdnb.pbrd.co/images/De0kGZBomhZ0.png",
+    "color": "#FFFFFF",
+    "backgroundColor": "bronze"
   },
   {
     "field": "products",
     "project-name": "System for Retail",
-    "img": "https://picsum.photos/800/600?random=20",
-    "color": "copper"
+    "img": "https://gcdnb.pbrd.co/images/7CeviWOpbboX.png",
+    "color": "#333333",
+    "backgroundColor": "copper"
   }
 ]
